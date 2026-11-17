@@ -1,0 +1,132 @@
+NAVEGA — SÍNTESE PÚBLICA DO PROJETO ACADÊMICO
+Autoria: Jamilli Monteiro
+Disciplina: Laboratório de IA Aplicada
+Professor: Diego Luis Kreutz
+Período: segundo semestre de 2026
+Persistência verificada em 03/11/2026
+Política seletiva implementada em 06/11/2026
+
+CONTEXTO E PROBLEMA
+Informações sobre transporte fluvial são publicadas em flyers, tabelas e legendas.
+O passageiro precisa localizar e interpretar o conteúdo. Campos ausentes, formatos
+variados e anúncios históricos dificultam a organização dos dados.
+
+REQUISITOS
+Vincular a origem, a data de publicação e o arquivo original.
+Extrair embarcação, trajeto, evento, data e hora. Preservar campos ausentes.
+Guardar candidatos e evidências. Reter registros com lacunas críticas.
+Consultar pelo chat por trajeto, data, evento e tipo de embarcação.
+
+ARTIGOS E BASES PÚBLICAS
+UEA, Marupiara (2021), oferta do transporte fluvial no rio Solimões:
+https://periodicos.uea.edu.br/index.php/marupiara/article/view/2195
+ANTAQ (2017), oferta e demanda do transporte fluvial amazônico:
+https://sophia.antaq.gov.br/terminal/acervo/detalhe/27594?guid=4775b8daa2a
+Huang et al., competição ICDAR 2019 sobre OCR e extração de campos:
+https://arxiv.org/abs/2103.10213
+IBGE, Censo 2022: Tabatinga (66.764), Benjamin Constant (37.648) e
+Atalaia do Norte (15.314 habitantes). Panoramas municipais:
+https://www.ibge.gov.br/cidades-e-estados/am/tabatinga.html
+https://www.ibge.gov.br/cidades-e-estados/am/benjamin-constant.html
+https://www.ibge.gov.br/cidades-e-estados/am/atalaia-do-norte.html
+
+PROPOSTA
+Usar anúncios públicos do Instagram como fonte automática desta entrega.
+Preservar conteúdo e procedência, extrair campos e verificar estrutura e evidências.
+Guardar candidatos no PostgreSQL. A política de 06/11 prevê liberar automaticamente
+registros suficientes, reter os demais e abster-se no chat quando não houver
+correspondência suficiente. A revisão no painel existente é opcional. Compra e pagamento ocorrem no atendimento humano
+da agência, fora do Navega.
+
+EVOLUÇÃO DOCUMENTADA
+04/09/2026: primeira base de frontend, API e PostgreSQL, seguida de login,
+cadastros e publicação de viagens, com validações locais documentadas.
+20/09/2026: refinamento para descoberta de saídas e contato humano, separação de
+cenários demonstrativos e registro das limitações do ambiente de validação.
+22/09/2026: reconstrução do projeto, integração de interface/API/banco e recuperação
+do relatório histórico com 21 embarcações, 47 saídas e 12 chegadas.
+13/10/2026: validação assistida com publicação pública real; regras sobre a legenda.
+Essa obtenção assistida não era coleta automática pela API.
+15/10/2026: coleta oficial comprovada de uma publicação e suas três imagens,
+com metadados e integridade preservados. Não comprovava ainda o fluxo inteiro.
+28/10/2026: organização de imagens e extrações OCR/Gemini para comparação por campo.
+29/10/2026: resultados Gemini aproveitados para três imagens e 34 ocorrências.
+02/11/2026: consulta pública pelo chat, conferência no painel e interface azul;
+comparação exploratória Gemini × Claude.
+03/11/2026: autorização regularizada e ciclo com três publicações coletadas;
+demonstração com fonte, original, extração e leitura SQL dos candidatos.
+03/11/2026: sugestões nos campos, rascunhos e atualização de pendências no painel;
+triagem/lote implementados; naquele momento, liberação automática em simulação.
+06/11/2026: publicação seletiva implementada, com revisão humana opcional;
+regras testadas com dados sintéticos, sem confirmação de liberação real no banco.
+03/11/2026: preparação e verificação do pacote de implantação, sem prova de
+publicação ou validação da aplicação na AWS.
+
+ESTÁGIO ATUAL
+Extração de dados dos anúncios em andamento. Leituras de amostras já foram
+registradas. A validação final do fluxo é a etapa seguinte.
+A política atual de 06/11 substitui exigências históricas de revisão obrigatória.
+Interface/API/banco: implementados e integrados no ambiente local.
+Instagram: coleta real e rotina diária documentadas; dependem de autorização e
+servidor em execução para continuidade.
+PostgreSQL: candidatos e originais vinculados; persistência demonstrada.
+Conferência: painel, sugestões e rascunhos implementados; revisão opcional desde 06/11.
+Chat: integração com dados aprovados verificada em cenários documentados; falta
+o ensaio completo da amostra selecionada para a apresentação.
+Liberação seletiva: política implementada e ambiente configurado ACTIVE em 06/11;
+tentativa no banco bloqueada, sem comprovação de liberação real. Registros
+insuficientes permanecem retidos; não há tarefa humana obrigatória por anúncio.
+Implantação: pacote preparado; publicação e validação AWS ainda pendentes.
+Publicação do site acadêmico: suspensa até autorização da responsável.
+
+DIFICULDADES E EVOLUÇÃO
+Diferenças entre versões e pastas locais exigiram recuperação de contexto e
+reconstrução da base. Problemas de conexão/autorização afetaram a coleta e foram
+tratados até um ciclo comprovado. Leituras incompletas/divergentes motivaram
+preservação da fonte, indicação de lacunas e conferência por campo.
+
+EXEMPLO PÚBLICO
+Dados da primeira linha de um anúncio histórico.
+Embarcação: L/M Cidade de Manaquiri.
+Origem: Manaus. Destino: Tabatinga. Dia/mês: 05/10. Horário anunciado: 05:00.
+Ano e preço: não informados na imagem. Não deduzir ano pelo dia da semana.
+Finalidade acadêmica; o exemplo não comprova viagem ou disponibilidade atual.
+
+COMPARAÇÃO DE LEITURAS
+O projeto usou pelo menos oito imagens de anúncios. A comparação entre
+Gemini e Claude considera quatro dessas imagens.
+Estudo exploratório registrado em 02/11/2026: quatro imagens correspondentes,
+37 registros por resposta, oito campos por registro, 296 comparações.
+204 concordâncias e 92 divergências. Esses números não medem acurácia.
+Os formatos/contextos não foram controlados e não havia gabarito humano independente.
+Não comprova superioridade geral de um modelo. Dois modelos não são executados
+obrigatoriamente a cada ciclo do coletor.
+
+ESTADO E LIMITES
+Há evidências de implementação, coleta real, armazenamento e decisões humanas
+anteriores. A amostra da apresentação e o fluxo real com a política atual ainda precisam de
+validação final; isso não representa revisão humana obrigatória por anúncio.
+O monitor depende da API ligada e da autorização externa; frequência de 24 horas,
+até três publicações por ciclo e janela de 100 posts não garantem cobertura total.
+Captura, candidato salvo, decisão de liberação e consulta são estados diferentes.
+Ano ausente só é contextualizado com publicação oficial recente do ano corrente,
+entre postagem e 90 dias seguintes dentro do mesmo ano, com proveniência.
+A imagem histórica isolada do exemplo conserva o ano ausente.
+Publicação da aplicação na AWS ainda não comprovada pelos registros utilizados.
+O site acadêmico é estático e não executa coleta, SQL, IA ou consulta operacional.
+
+PROCEDÊNCIA NOS DOCUMENTOS DO PROJETO
+docs/validacao-fase-0.md
+docs/validacao-fase-1.md
+docs/validacao-descoberta.md
+docs/contexto-recuperado-navega.md
+docs/reconstrucao-navega-2026-09-22.md
+docs/validacao-extracao-instagram-2026-10-13.md
+docs/pesquisa-fontes/levantamento-2026-10-14.json
+docs/comparacao-ocr-gemini-2026-10-28/gemini-01.json
+docs/integracao-gemini-2026-10-29/
+docs/comparacao-gemini-claude-2026-11-02/analise.txt
+docs/fechamento-entrega-2026-11.md
+docs/publicacao-seletiva.md
+apps/api/CONTINUIDADE-BACKEND.md
+
