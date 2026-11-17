@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480">
+  <defs>
+    <linearGradient id="land" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#0a263e"/>
+      <stop offset="1" stop-color="#184967"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#a4c8de" stroke-opacity=".11"/>
+    </pattern>
+  </defs>
+  <path d="M0 0h1200v480H0z" fill="url(#land)"/>
+  <g fill="none" stroke="#7dafc8" stroke-opacity=".19">
+    <path d="M0 25C133 12 196 57 264 111s145 82 215 32S577 82 653 86s176 57 251 57 128-29 202-66 91-14 121-13"/>
+    <path d="M0 44c132-16 194 35 260 84s140 79 222 30S578 91 653 94s176 58 251 58 126-26 205-65 89-14 119-14"/>
+    <path d="M0 124c91 0 128 23 189 68s140 89 233 58 133-96 223-78 140 62 240 71 164-28 224-63 64-26 114-21"/>
+    <path d="M0 143c92-4 134 31 185 68s137 88 234 61 140-96 225-87 149 65 241 69 163-27 225-62 67-24 111-23"/>
+    <path d="M0 279c84-16 142 42 207 31s117-69 207-58 126 55 184 37 90-24 165 19 91 79 190 49 170-90 268-77"/>
+    <path d="M0 431c110-34 152 15 249-13s138-69 224-46 118 87 204 77 120-62 205-67 135 26 210-11 80-58 135-53"/>
+    <path d="M0 445c113-37 151 18 249-11s138-71 224-50 116 84 204 77 119-63 205-65 135 22 211-15 79-58 134-54"/>
+  </g>
+  <path d="M0 0h1200v480H0z" fill="url(#grid)"/>
+</svg>
