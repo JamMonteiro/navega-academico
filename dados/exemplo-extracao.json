@@ -1,0 +1,66 @@
+{
+  "projeto": "Navega",
+  "finalidade": "Exemplo acadêmico histórico; não é oferta atual de viagem.",
+  "fonte": {
+    "canal": "Instagram público",
+    "cabecalho_literal": "EMBARCAÇÕES SAINDO DE MANAUS COM DESTINO À TABATINGA"
+  },
+  "referencia": "Leitura existente organizada em 28/10/2026; primeiro registro.",
+  "registro": {
+    "id": 1,
+    "embarcacao": {
+      "valor": "L/M CIDADE DE MANAQUIRI",
+      "estado": "legível",
+      "evidencia_literal": "L/M CIDADE DE MANAQUIRI",
+      "localizacao_evidencia": "linha 1 do bloco SEGUNDA 05/10"
+    },
+    "tipo_evento": {
+      "valor": "saída",
+      "estado": "legível",
+      "evidencia_literal": "EMBARCAÇÕES SAINDO DE",
+      "localizacao_evidencia": "cabeçalho de rota"
+    },
+    "municipio_origem": {
+      "valor": "Manaus",
+      "estado": "legível",
+      "evidencia_literal": "MANAUS",
+      "localizacao_evidencia": "cabeçalho de rota"
+    },
+    "municipio_destino": {
+      "valor": "Tabatinga",
+      "estado": "legível",
+      "evidencia_literal": "TABATINGA",
+      "localizacao_evidencia": "cabeçalho de rota"
+    },
+    "dia_mes": {
+      "valor": "05/10",
+      "estado": "legível",
+      "evidencia_literal": "05/10",
+      "localizacao_evidencia": "coluna de data do bloco SEGUNDA"
+    },
+    "ano": {
+      "valor": null,
+      "estado": "não informado",
+      "evidencia_literal": null,
+      "localizacao_evidencia": null
+    },
+    "horario": {
+      "valor": "às 5h",
+      "estado": "legível",
+      "evidencia_literal": "às 5h",
+      "localizacao_evidencia": "coluna de horário do bloco SEGUNDA 05/10"
+    },
+    "preco": {
+      "valor": null,
+      "estado": "não informado",
+      "evidencia_literal": null,
+      "localizacao_evidencia": null
+    }
+  },
+  "limites": [
+    "Ano não informado na imagem.",
+    "Preço não informado na imagem.",
+    "A imagem não comprova disponibilidade atual.",
+    "O arquivo é um recorte documental e não realiza aprovação no Navega."
+  ]
+}
