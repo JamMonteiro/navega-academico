@@ -1,0 +1,67 @@
+{
+  "updatedAt": "2026-11-24T14:03:05.691Z",
+  "scope": "Apresentação editada de evidências preservadas. Não é execução ao vivo.",
+  "databaseSample": {
+    "queryType": "SELECT somente leitura",
+    "rows": [
+      {
+        "evento": "1",
+        "embarcacao": "FB VITÓRIA RÉGIA",
+        "origem": null,
+        "destino": null,
+        "data_extraida": "27/11",
+        "situacao_data": "AMBIGUOUS",
+        "texto_data_na_fonte": "27/11",
+        "horario": "À CONFIRMAR",
+        "fonte": "https://www.instagram.com/p/Df-lQYWiWzx/"
+      }
+    ]
+  },
+  "comparison": {
+    "images": 2,
+    "humanReviewedEvents": 13,
+    "commonFields": [
+      "embarcação",
+      "origem",
+      "destino",
+      "data",
+      "horário"
+    ],
+    "visibleFields": 63,
+    "absentFields": 2,
+    "textPreserved": {
+      "GPT": 62,
+      "Gemini": 63,
+      "Claude": 63
+    },
+    "uncertaintyRequired": 14,
+    "uncertaintyRespected": {
+      "GPT": 0,
+      "Gemini": 12,
+      "Claude": 12
+    },
+    "configurations": {
+      "GPT": "gpt-5.4-mini-2026-03-17, API",
+      "Gemini": "gemini-3.5-flash-lite, API",
+      "Claude": "Sonnet 5.5, rótulo do chat; versão API desconhecida"
+    },
+    "limitations": [
+      "Amostra de duas imagens; sem ranking geral.",
+      "Interfaces e configurações diferem.",
+      "Referência humana assistida; não é anotação cega independente.",
+      "Divergência textual do GPT: espaço em E. Araújo.",
+      "Conferência da transcrição não confirma disponibilidade da viagem."
+    ]
+  },
+  "preservedExecution": {
+    "date": "2026-11-22",
+    "newAiCallsByCycle": [
+      1,
+      0,
+      0
+    ],
+    "newExtractions": 1,
+    "repeatedCyclesStable": true,
+    "source": "https://www.instagram.com/p/Df-kzkliAJa/"
+  }
+}

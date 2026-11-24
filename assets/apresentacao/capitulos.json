@@ -1,0 +1,128 @@
+[
+  {
+    "start": 0,
+    "duration": 12,
+    "title": "NAVEGA",
+    "lead": "Do anúncio à informação que pode ser conferida.",
+    "explanation": "Projeto de Jamilli Monteiro • Laboratório de IA Aplicada • UNIPAMPA"
+  },
+  {
+    "start": 12,
+    "duration": 14,
+    "title": "O rio conecta. A informação precisa acompanhar.",
+    "lead": "No Alto Solimões, uma viagem começa com perguntas simples.",
+    "explanation": "Qual embarcação? Qual trajeto? Em que dia? A que horas?"
+  },
+  {
+    "start": 26,
+    "duration": 12,
+    "title": "O ponto de partida é o anúncio",
+    "lead": "Informações aparecem em cartazes e publicações com formatos diferentes.",
+    "explanation": "O protótipo trabalha com imagens de anúncios preservadas para conferência."
+  },
+  {
+    "start": 38,
+    "duration": 16,
+    "title": "Como o Navega organiza essa informação",
+    "lead": "Cada etapa mantém o vínculo com a fonte original.",
+    "explanation": "Capturar → extrair → guardar → conferir → revisar."
+  },
+  {
+    "start": 54,
+    "duration": 16,
+    "title": "Uma imagem real. Campos verificáveis.",
+    "lead": "Exemplo histórico: NM Sagrado Coração de Jesus.",
+    "explanation": "A publicação informa 28/11 e “A CONFIRMAR”. Origem e destino não estão informados."
+  },
+  {
+    "start": 70,
+    "duration": 16,
+    "title": "Um cartaz pode conter vários eventos",
+    "lead": "Na programação semanal, cada linha corresponde a uma embarcação.",
+    "explanation": "Exemplo conferido: L/M Crystal • Manaus → Tabatinga • 06/10 • às 5h."
+  },
+  {
+    "start": 86,
+    "duration": 16,
+    "title": "Copiar o texto não resolve a incerteza",
+    "lead": "“28/11” não informa o ano. “A CONFIRMAR” não define um horário.",
+    "explanation": "O contrato exige valor nulo e estado ambíguo, preservando o texto como evidência."
+  },
+  {
+    "start": 102,
+    "duration": 16,
+    "title": "O resultado fica no PostgreSQL",
+    "lead": "Consulta de leitura realizada em 24/11/2026, em outra amostra preservada.",
+    "explanation": "FB Vitória Régia • data 27/11 • horário “À CONFIRMAR” • origem e destino ausentes."
+  },
+  {
+    "start": 118,
+    "duration": 14,
+    "title": "Houve uma extração nova registrada",
+    "lead": "Em 22/11, o monitor processou o anúncio FB Embaixador.",
+    "explanation": "O registro da execução confirma 1 nova chamada de IA e 1 nova extração."
+  },
+  {
+    "start": 132,
+    "duration": 14,
+    "title": "Rodar de novo não deve duplicar",
+    "lead": "As duas rodadas seguintes reaproveitaram o conteúdo conhecido.",
+    "explanation": "0 chamadas novas de IA • IDs estáveis • nenhuma duplicação nas rodadas repetidas."
+  },
+  {
+    "start": 146,
+    "duration": 14,
+    "title": "Por que GPT e Gemini?",
+    "lead": "Um modelo extrai; outro confere os campos contra a imagem.",
+    "explanation": "GPT-5.4 mini e Gemini participam desse fluxo. Claude também entra no estudo comparativo."
+  },
+  {
+    "start": 160,
+    "duration": 16,
+    "title": "A decisão humana continua visível",
+    "lead": "O painel mostra a fonte, os campos e o histórico de decisões.",
+    "explanation": "Conferir, corrigir e registrar uma decisão permite rastrear o que mudou."
+  },
+  {
+    "start": 176,
+    "duration": 18,
+    "title": "Primeira medida de acerto",
+    "lead": "2 imagens • 13 eventos com transcrição conferida • 5 campos em comum.",
+    "explanation": "Embarcação, origem, destino, data e horário: a avaliação usa as respostas preservadas."
+  },
+  {
+    "start": 194,
+    "duration": 16,
+    "title": "Texto certo e incerteza são critérios distintos",
+    "lead": "Acertar a escrita da data não autoriza inventar o ano.",
+    "explanation": "Incertezas respeitadas: GPT 0/14; Gemini 12/14; Claude 12/14."
+  },
+  {
+    "start": 210,
+    "duration": 14,
+    "title": "O que esses números ainda não provam",
+    "lead": "A amostra é pequena e as condições dos modelos diferem.",
+    "explanation": "GPT e Gemini via API; Claude via chat. Referência humana assistida, sem anotação cega."
+  },
+  {
+    "start": 224,
+    "duration": 12,
+    "title": "O que já funciona neste protótipo",
+    "lead": "Extração, preservação da fonte, banco, revisão e comparação.",
+    "explanation": "A segunda IA também pode errar. Seus alertas precisam ser conferidos."
+  },
+  {
+    "start": 236,
+    "duration": 12,
+    "title": "O próximo passo é ampliar a validação",
+    "lead": "Mais anúncios, diferentes formatos e revisão humana consistente.",
+    "explanation": "Integração com grupos de WhatsApp e bot final ainda não estão operacionais."
+  },
+  {
+    "start": 248,
+    "duration": 16,
+    "title": "Navega: informação com origem e revisão",
+    "lead": "Uma base verificável para evoluir a consulta de viagens fluviais.",
+    "explanation": "Jamilli Monteiro • Mestrado Profissional em Engenharia de Software • UNIPAMPA"
+  }
+]

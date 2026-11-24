@@ -1,0 +1,92 @@
+NAVEGA — APRESENTAÇÃO VISUAL SEM NARRAÇÃO
+Duração: 264 segundos
+Montagem de registros preservados, não é execução ao vivo.
+
+00:00 — NAVEGA
+Do anúncio à informação que pode ser conferida.
+Projeto de Jamilli Monteiro • Laboratório de IA Aplicada • UNIPAMPA
+
+00:12 — O rio conecta. A informação precisa acompanhar.
+No Alto Solimões, uma viagem começa com perguntas simples.
+Qual embarcação? Qual trajeto? Em que dia? A que horas?
+
+00:26 — O ponto de partida é o anúncio
+Informações aparecem em cartazes e publicações com formatos diferentes.
+O protótipo trabalha com imagens de anúncios preservadas para conferência.
+
+00:38 — Como o Navega organiza essa informação
+Cada etapa mantém o vínculo com a fonte original.
+Capturar → extrair → guardar → conferir → revisar.
+
+00:54 — Uma imagem real. Campos verificáveis.
+Exemplo histórico: NM Sagrado Coração de Jesus.
+A publicação informa 28/11 e “A CONFIRMAR”. Origem e destino não estão informados.
+
+01:10 — Um cartaz pode conter vários eventos
+Na programação semanal, cada linha corresponde a uma embarcação.
+Exemplo conferido: L/M Crystal • Manaus → Tabatinga • 06/10 • às 5h.
+
+01:26 — Copiar o texto não resolve a incerteza
+“28/11” não informa o ano. “A CONFIRMAR” não define um horário.
+O contrato exige valor nulo e estado ambíguo, preservando o texto como evidência.
+
+01:42 — O resultado fica no PostgreSQL
+Consulta de leitura realizada em 24/11/2026, em outra amostra preservada.
+FB Vitória Régia • data 27/11 • horário “À CONFIRMAR” • origem e destino ausentes.
+
+01:58 — Houve uma extração nova registrada
+Em 22/11, o monitor processou o anúncio FB Embaixador.
+O registro da execução confirma 1 nova chamada de IA e 1 nova extração.
+
+02:12 — Rodar de novo não deve duplicar
+As duas rodadas seguintes reaproveitaram o conteúdo conhecido.
+0 chamadas novas de IA • IDs estáveis • nenhuma duplicação nas rodadas repetidas.
+
+02:26 — Por que GPT e Gemini?
+Um modelo extrai; outro confere os campos contra a imagem.
+GPT-5.4 mini e Gemini participam desse fluxo. Claude também entra no estudo comparativo.
+
+02:40 — A decisão humana continua visível
+O painel mostra a fonte, os campos e o histórico de decisões.
+Conferir, corrigir e registrar uma decisão permite rastrear o que mudou.
+
+02:56 — Primeira medida de acerto
+2 imagens • 13 eventos com transcrição conferida • 5 campos em comum.
+Embarcação, origem, destino, data e horário: a avaliação usa as respostas preservadas.
+
+03:14 — Texto certo e incerteza são critérios distintos
+Acertar a escrita da data não autoriza inventar o ano.
+Incertezas respeitadas: GPT 0/14; Gemini 12/14; Claude 12/14.
+
+03:30 — O que esses números ainda não provam
+A amostra é pequena e as condições dos modelos diferem.
+GPT e Gemini via API; Claude via chat. Referência humana assistida, sem anotação cega.
+
+03:44 — O que já funciona neste protótipo
+Extração, preservação da fonte, banco, revisão e comparação.
+A segunda IA também pode errar. Seus alertas precisam ser conferidos.
+
+03:56 — O próximo passo é ampliar a validação
+Mais anúncios, diferentes formatos e revisão humana consistente.
+Integração com grupos de WhatsApp e bot final ainda não estão operacionais.
+
+04:08 — Navega: informação com origem e revisão
+Uma base verificável para evoluir a consulta de viagens fluviais.
+Jamilli Monteiro • Mestrado Profissional em Engenharia de Software • UNIPAMPA
+
+DESCRIÇÃO DAS TELAS E DADOS
+Uma imagem real. Campos verificáveis.: Na tela, a imagem original aparece ao lado dos campos NM Sagrado Coração de Jesus, 28/11, A CONFIRMAR e origem/destino não informados.
+
+Um cartaz pode conter vários eventos: O cartaz semanal é exibido com o recorte real do campo de horário do evento L/M Crystal: às 5h.
+
+O resultado fica no PostgreSQL: Tabela do SELECT: embarcação FB VITÓRIA RÉGIA; origem NULL; destino NULL; data 27/11; situação AMBIGUOUS; horário À CONFIRMAR.
+
+Houve uma extração nova registrada: O anúncio FB Embaixador aparece ao lado do número 1, referente à chamada nova registrada em 22/11.
+
+Rodar de novo não deve duplicar: Três cartões mostram 1 chamada nova na primeira rodada, 0 na segunda e 0 na terceira.
+
+A decisão humana continua visível: Uma captura do painel mostra imagem, formulário e histórico. A conferência da referência foi feita pela autora com rascunho assistido e registrada pelo assistente; não é uma nova revisão executada neste vídeo.
+
+Primeira medida de acerto: Texto preservado: GPT 62/63, Gemini 63/63 e Claude 63/63. Duas ausências foram respeitadas pelos três modelos. A divergência textual do GPT é o espaço em E. Araújo; isso não é automaticamente uma alucinação.
+
+Texto certo e incerteza são critérios distintos: Incerteza respeitada: GPT 0/14, Gemini 12/14 e Claude 12/14. O critério exige texto correto na evidência, valor nulo e estado ambíguo.
