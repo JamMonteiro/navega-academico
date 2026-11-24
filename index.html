@@ -75,6 +75,7 @@
           ><small>PROJETO ACADÊMICO</small></a
         >
         <nav id="navigation" aria-label="Navegação principal">
+          <a href="#apresentacao">Vídeo</a>
           <a href="#contexto">Mapa</a>
           <a href="#evidencia">Projeto</a>
           <a href="#pesquisa">Pesquisa</a>
@@ -125,8 +126,64 @@
             <a class="hero-primary" href="#evidencia"
               >Entender o projeto <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg
             ></a>
-            <a class="hero-secondary" href="#chat">Ver demonstração</a>
+            <a class="hero-secondary" href="#apresentacao">Assistir à apresentação · 4min24s</a>
           </div>
+        </div>
+      </section>
+
+      <section class="section presentation-section" id="apresentacao" aria-labelledby="presentation-title">
+        <div class="container">
+          <div class="section-heading">
+            <div><p class="eyebrow">Apresentação do projeto · 24/11/2026</p>
+              <h2 id="presentation-title">Conheça o Navega <em>em 4 minutos</em></h2></div>
+            <p class="heading-aside">4min24s · Sem áudio · Textos e destaques na tela</p>
+          </div>
+          <p class="presentation-intro">Do anúncio fluvial à informação conferida: veja as fontes, a extração, o banco, a revisão humana e os primeiros resultados do protótipo.</p>
+          <figure class="presentation-player">
+            <video id="navega-presentation" controls playsinline preload="metadata" poster="assets/apresentacao/capa.jpg" width="1280" height="720" aria-label="Apresentação visual do Navega, 4 minutos e 24 segundos" aria-describedby="presentation-description">
+              <source src="assets/apresentacao/navega-apresentacao.mp4" type="video/mp4" />
+              <track kind="chapters" src="assets/apresentacao/capitulos.vtt" srclang="pt-BR" label="Capítulos" default />
+              Seu navegador não reproduz este vídeo. <a href="assets/apresentacao/navega-apresentacao.mp4">Abra o arquivo MP4</a> ou leia o roteiro abaixo.
+            </video>
+            <figcaption id="presentation-description">Apresentação editada com telas e resultados preservados de 21 a 24/11/2026. Os anúncios são históricos. A sequência não é uma execução ao vivo, e conferir uma transcrição não confirma a disponibilidade da viagem. No celular, use tela cheia e gire a tela para ler os detalhes.</figcaption>
+          </figure>
+          <nav class="presentation-chapters" aria-label="Capítulos do vídeo">
+            <a href="assets/apresentacao/navega-apresentacao.mp4#t=0" data-video-time="0"><span>00:00</span> NAVEGA</a>
+            <a href="assets/apresentacao/navega-apresentacao.mp4#t=38" data-video-time="38"><span>00:38</span> Como o Navega organiza essa informação</a>
+            <a href="assets/apresentacao/navega-apresentacao.mp4#t=54" data-video-time="54"><span>00:54</span> Uma imagem real. Campos verificáveis.</a>
+            <a href="assets/apresentacao/navega-apresentacao.mp4#t=102" data-video-time="102"><span>01:42</span> O resultado fica no PostgreSQL</a>
+            <a href="assets/apresentacao/navega-apresentacao.mp4#t=132" data-video-time="132"><span>02:12</span> Rodar de novo não deve duplicar</a>
+            <a href="assets/apresentacao/navega-apresentacao.mp4#t=160" data-video-time="160"><span>02:40</span> A decisão humana continua visível</a>
+            <a href="assets/apresentacao/navega-apresentacao.mp4#t=176" data-video-time="176"><span>02:56</span> Primeira medida de acerto</a>
+            <a href="assets/apresentacao/navega-apresentacao.mp4#t=236" data-video-time="236"><span>03:56</span> O próximo passo é ampliar a validação</a>
+          </nav>
+          <p id="presentation-status" class="presentation-status" role="status" aria-live="polite"></p>
+          <div class="presentation-links">
+            <a class="text-link" href="assets/apresentacao/navega-apresentacao.mp4" download>Baixar vídeo MP4 · 1,8 MB ↓</a>
+            <a class="text-link" href="assets/apresentacao/roteiro.txt" download>Baixar roteiro em texto ↓</a>
+            <a class="text-link" href="assets/apresentacao/resultados-verificados.json">Consultar dados da avaliação ↗</a>
+          </div>
+          <details class="presentation-transcript"><summary>Ler o roteiro e a descrição das telas</summary><div>
+<article><h3>00:00 — NAVEGA</h3><p>Do anúncio à informação que pode ser conferida. Projeto de Jamilli Monteiro • Laboratório de IA Aplicada • UNIPAMPA</p></article>
+<article><h3>00:12 — O rio conecta. A informação precisa acompanhar.</h3><p>No Alto Solimões, uma viagem começa com perguntas simples. Qual embarcação? Qual trajeto? Em que dia? A que horas?</p></article>
+<article><h3>00:26 — O ponto de partida é o anúncio</h3><p>Informações aparecem em cartazes e publicações com formatos diferentes. O protótipo trabalha com imagens de anúncios preservadas para conferência.</p></article>
+<article><h3>00:38 — Como o Navega organiza essa informação</h3><p>Cada etapa mantém o vínculo com a fonte original. Capturar → extrair → guardar → conferir → revisar.</p></article>
+<article><h3>00:54 — Uma imagem real. Campos verificáveis.</h3><p>Exemplo histórico: NM Sagrado Coração de Jesus. A publicação informa 28/11 e “A CONFIRMAR”. Origem e destino não estão informados.</p><p>Na tela, a imagem original aparece ao lado dos campos NM Sagrado Coração de Jesus, 28/11, A CONFIRMAR e origem/destino não informados.</p></article>
+<article><h3>01:10 — Um cartaz pode conter vários eventos</h3><p>Na programação semanal, cada linha corresponde a uma embarcação. Exemplo conferido: L/M Crystal • Manaus → Tabatinga • 06/10 • às 5h.</p><p>O cartaz semanal é exibido com o recorte real do campo de horário do evento L/M Crystal: às 5h.</p></article>
+<article><h3>01:26 — Copiar o texto não resolve a incerteza</h3><p>“28/11” não informa o ano. “A CONFIRMAR” não define um horário. O contrato exige valor nulo e estado ambíguo, preservando o texto como evidência.</p></article>
+<article><h3>01:42 — O resultado fica no PostgreSQL</h3><p>Consulta de leitura realizada em 24/11/2026, em outra amostra preservada. FB Vitória Régia • data 27/11 • horário “À CONFIRMAR” • origem e destino ausentes.</p><p>Tabela do SELECT: embarcação FB VITÓRIA RÉGIA; origem NULL; destino NULL; data 27/11; situação AMBIGUOUS; horário À CONFIRMAR.</p></article>
+<article><h3>01:58 — Houve uma extração nova registrada</h3><p>Em 22/11, o monitor processou o anúncio FB Embaixador. O registro da execução confirma 1 nova chamada de IA e 1 nova extração.</p><p>O anúncio FB Embaixador aparece ao lado do número 1, referente à chamada nova registrada em 22/11.</p></article>
+<article><h3>02:12 — Rodar de novo não deve duplicar</h3><p>As duas rodadas seguintes reaproveitaram o conteúdo conhecido. 0 chamadas novas de IA • IDs estáveis • nenhuma duplicação nas rodadas repetidas.</p><p>Três cartões mostram 1 chamada nova na primeira rodada, 0 na segunda e 0 na terceira.</p></article>
+<article><h3>02:26 — Por que GPT e Gemini?</h3><p>Um modelo extrai; outro confere os campos contra a imagem. GPT-5.4 mini e Gemini participam desse fluxo. Claude também entra no estudo comparativo.</p></article>
+<article><h3>02:40 — A decisão humana continua visível</h3><p>O painel mostra a fonte, os campos e o histórico de decisões. Conferir, corrigir e registrar uma decisão permite rastrear o que mudou.</p><p>Uma captura do painel mostra imagem, formulário e histórico. A conferência da referência foi feita pela autora com rascunho assistido e registrada pelo assistente; não é uma nova revisão executada neste vídeo.</p></article>
+<article><h3>02:56 — Primeira medida de acerto</h3><p>2 imagens • 13 eventos com transcrição conferida • 5 campos em comum. Embarcação, origem, destino, data e horário: a avaliação usa as respostas preservadas.</p><p>Texto preservado: GPT 62/63, Gemini 63/63 e Claude 63/63. Duas ausências foram respeitadas pelos três modelos. A divergência textual do GPT é o espaço em E. Araújo; isso não é automaticamente uma alucinação.</p></article>
+<article><h3>03:14 — Texto certo e incerteza são critérios distintos</h3><p>Acertar a escrita da data não autoriza inventar o ano. Incertezas respeitadas: GPT 0/14; Gemini 12/14; Claude 12/14.</p><p>Incerteza respeitada: GPT 0/14, Gemini 12/14 e Claude 12/14. O critério exige texto correto na evidência, valor nulo e estado ambíguo.</p></article>
+<article><h3>03:30 — O que esses números ainda não provam</h3><p>A amostra é pequena e as condições dos modelos diferem. GPT e Gemini via API; Claude via chat. Referência humana assistida, sem anotação cega.</p></article>
+<article><h3>03:44 — O que já funciona neste protótipo</h3><p>Extração, preservação da fonte, banco, revisão e comparação. A segunda IA também pode errar. Seus alertas precisam ser conferidos.</p></article>
+<article><h3>03:56 — O próximo passo é ampliar a validação</h3><p>Mais anúncios, diferentes formatos e revisão humana consistente. Integração com grupos de WhatsApp e bot final ainda não estão operacionais.</p></article>
+<article><h3>04:08 — Navega: informação com origem e revisão</h3><p>Uma base verificável para evoluir a consulta de viagens fluviais. Jamilli Monteiro • Mestrado Profissional em Engenharia de Software • UNIPAMPA</p></article>
+<p class="presentation-source-note">Fontes públicas das imagens: <a href="https://www.instagram.com/p/Df-lYoECOUe/" target="_blank" rel="noopener noreferrer">Sagrado Coração de Jesus</a>, <a href="https://www.instagram.com/p/DeIyI_RjOhQ/" target="_blank" rel="noopener noreferrer">programação semanal</a> e <a href="https://www.instagram.com/p/Df-kzkliAJa/" target="_blank" rel="noopener noreferrer">FB Embaixador</a>. Os cartazes pertencem aos seus respectivos autores e são apresentados como evidências acadêmicas.</p>
+          </div></details>
         </div>
       </section>
 

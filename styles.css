@@ -2688,3 +2688,29 @@ details[open] > summary > span[aria-hidden] {
   width: 19px;
   height: 19px;
 }
+
+/* Apresentação visual — carrega o MP4 somente quando solicitado. */
+.presentation-section { background: #f5f9fb; }
+.presentation-intro { max-width: 820px; margin: 0 0 28px; font-size: 1.1rem; }
+.presentation-player { overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--navy); box-shadow: 0 16px 45px #09243b16; }
+.presentation-player video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #071e30; }
+.presentation-player figcaption { padding: 18px 24px; color: #d2e4ec; font-size: .87rem; line-height: 1.65; }
+.presentation-chapters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 20px; }
+.presentation-chapters a { display: block; padding: 14px; border: 1px solid var(--line); border-radius: 12px; font-size: .86rem; line-height: 1.45; background: white; }
+.presentation-chapters a:hover { border-color: var(--blue); background: #e9f3f8; }
+.presentation-chapters span { display: block; margin-bottom: 5px; color: var(--blue); font-variant-numeric: tabular-nums; font-weight: 700; }
+.presentation-status { margin-top: 12px; color: var(--muted); font-size: .85rem; }
+.presentation-status:empty { display: none; }
+.presentation-links { display: flex; flex-wrap: wrap; gap: 18px 28px; margin: 25px 0; }
+.presentation-links a { text-decoration: underline; text-underline-offset: 4px; }
+.presentation-transcript { border-top: 1px solid var(--line); padding-top: 22px; }
+.presentation-transcript summary { cursor: pointer; font-weight: 700; color: var(--blue); }
+.presentation-transcript > div { max-width: 880px; padding-top: 18px; }
+.presentation-transcript article { margin-bottom: 24px; }
+.presentation-transcript h3 { font-size: 1.05rem; margin-bottom: 7px; }
+.presentation-transcript p + p { margin-top: 8px; }
+.presentation-source-note { border-top: 1px solid var(--line); padding-top: 18px; font-size: .9rem; }
+.presentation-source-note a { text-decoration: underline; }
+@media (max-width: 900px) { .presentation-chapters { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .presentation-player { border-radius: 12px; } .presentation-player figcaption { padding: 14px; font-size: .8rem; } .presentation-chapters a { padding: 12px; font-size: .8rem; } }
+@media print { .presentation-player video, .presentation-chapters, .presentation-status { display: none; } .presentation-player { box-shadow: none; background: white; } .presentation-player figcaption { color: #143248; } }

@@ -288,3 +288,30 @@ document.getElementById('open-evidence-flyer').addEventListener('click', () => {
   document.getElementById('evidence-dialog-image').src = flyerImage.src;
   flyerDialog.showModal();
 });
+
+// Chapter links retain a direct MP4 fallback when JavaScript is unavailable.
+const presentationVideo = document.getElementById('navega-presentation');
+const presentationStatus = document.getElementById('presentation-status');
+document.querySelectorAll('[data-video-time]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const seconds = Number(link.dataset.videoTime);
+    const seek = () => {
+      presentationVideo.currentTime = seconds;
+      presentationVideo.play().catch(() => {
+        presentationStatus.textContent = 'Capítulo selecionado. Use o botão de reprodução do vídeo.';
+      });
+    };
+    if (presentationVideo.readyState >= 1) seek();
+    else {
+      presentationVideo.addEventListener('loadedmetadata', seek, { once: true });
+      presentationVideo.load();
+    }
+    presentationStatus.textContent = 'Capítulo: ' + link.textContent.trim();
+    presentationVideo.scrollIntoView({ block: 'center', behavior: 'auto' });
+    presentationVideo.focus({ preventScroll: true });
+  });
+});
+presentationVideo.addEventListener('error', () => {
+  presentationStatus.textContent = 'Não foi possível reproduzir. Use o link para baixar o MP4 ou leia o roteiro abaixo.';
+});

@@ -19,8 +19,21 @@ const publicFiles = new Map([
   ['/dados/notas-do-projeto.txt', ['dados/notas-do-projeto.txt', 'text/plain; charset=utf-8']],
 ]);
 
+for (const [filename, type] of [
+  ['navega-apresentacao.mp4', 'video/mp4'],
+  ['capa.jpg', 'image/jpeg'],
+  ['capitulos.vtt', 'text/vtt; charset=utf-8'],
+  ['capitulos.json', 'application/json; charset=utf-8'],
+  ['manifesto.json', 'application/json; charset=utf-8'],
+  ['resultados-verificados.json', 'application/json; charset=utf-8'],
+  ['roteiro.txt', 'text/plain; charset=utf-8'],
+]) {
+  const path = 'assets/apresentacao/' + filename;
+  publicFiles.set('/' + path, [path, type]);
+}
+
 // The same handler can be verified without opening a network socket.
-export async function siteResponse(address, method = 'GET') {
+export async function siteResponse(address, method = 'GET', range) {
   const headers = {
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'no-referrer',
@@ -44,6 +57,25 @@ export async function siteResponse(address, method = 'GET') {
   }
   const [filename, type] = entry;
   const body = await readFile(resolve(directory, filename));
+  if (type === 'video/mp4') {
+    headers['Accept-Ranges'] = 'bytes';
+    if (range && method === 'GET') {
+      const match = /^bytes=(\d*)-(\d*)$/.exec(range);
+      let start = 0;
+      let end = body.byteLength - 1;
+      if (match && (match[1] || match[2])) {
+        if (match[1]) {
+          start = Number(match[1]);
+          if (match[2]) end = Math.min(Number(match[2]), end);
+        } else start = Math.max(0, body.byteLength - Number(match[2]));
+      } else start = NaN;
+      if (!Number.isSafeInteger(start) || !Number.isSafeInteger(end) || start > end || start >= body.byteLength) {
+        return { status: 416, headers: { ...headers, 'Content-Range': `bytes */${body.byteLength}` }, body: undefined };
+      }
+      const part = body.subarray(start, end + 1);
+      return { status: 206, headers: { ...headers, 'Content-Type': type, 'Content-Length': part.byteLength, 'Content-Range': `bytes ${start}-${end}/${body.byteLength}` }, body: part };
+    }
+  }
   return {
     status: 200,
     headers: { ...headers, 'Content-Type': type, 'Content-Length': body.byteLength },
@@ -57,7 +89,7 @@ export function startAcademicSite(port = 4174) {
   }
   const server = createServer(async (request, response) => {
     try {
-      const result = await siteResponse(request.url, request.method);
+      const result = await siteResponse(request.url, request.method, request.headers.range);
       response.writeHead(result.status, result.headers);
       response.end(result.body);
     } catch {

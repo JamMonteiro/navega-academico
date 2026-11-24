@@ -57,12 +57,9 @@ extração como etapa atual. A comparação Gemini × Claude registrou 204
 concordâncias em 296 comparações de campos, feitas com quatro das pelo menos
 oito imagens usadas no projeto.
 
-**Publicação suspensa por solicitação da responsável.** Nenhum conteúdo foi
-publicado. O workflow disponível só pode ser acionado manualmente; não publica
-automaticamente em push. As instruções abaixo são para uma etapa futura, após
-autorização expressa.
+**Site publicado:** https://jammonteiro.github.io/navega-academico/ — endereço já vinculado na página da disciplina. A inclusão da apresentação visual foi solicitada pela autora em 24/11/2026. As instruções de endereço alternativo abaixo registram o planejamento inicial.
 
-## Endereço exigido pela disciplina
+## Planejamento inicial de endereço
 
 O nome proposto é **liaa-jamilli.github.io**. Confirme a sigla oficial da disciplina
 antes de criar a conta/organização. Não é um endereço já registrado ou publicado.
@@ -126,3 +123,10 @@ capa, o menu, os marcadores, o anúncio ampliado, o pipeline por teclado e as
 respostas ilustrativas do chat. As três larguras passaram na verificação de
 rolagem horizontal. Foram conferidos o foco visível, os contrastes das
 combinações principais e as regras CSS de movimento reduzido.
+
+
+## Apresentação visual — 24/11/2026
+
+A seção `#apresentacao` inclui um MP4 de 4min24s, sem áudio, com textos e destaques animados, capítulos e roteiro acessível. Usa evidências preservadas de 21–24/11, identificadas como apresentação editada. Não executa extração nem representa uma gravação ao vivo. O arquivo `assets/apresentacao/resultados-verificados.json` documenta a amostra de 13 eventos e os limites da avaliação. Os estudos mais antigos continuam datados nas seções originais.
+
+O MP4 usa H.264/yuv420p e faststart; o player usa controles nativos, playsinline e preload metadata, sem autoplay. Todos os caminhos são relativos para GitHub Pages. O workflow `pages.yml` continua disponível para acionamento manual; esta atualização preserva a configuração de hospedagem existente.
