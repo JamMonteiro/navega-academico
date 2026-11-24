@@ -1,0 +1,32 @@
+{
+  "title": "Navega — apresentação do projeto",
+  "durationSeconds": 264,
+  "width": 1280,
+  "height": 720,
+  "fps": 15,
+  "narration": false,
+  "audio": false,
+  "editedPresentation": true,
+  "evidenceDates": [
+    "2026-11-21",
+    "2026-11-22",
+    "2026-11-24"
+  ],
+  "sha256": "58a12d0cbf1d148f06bebdbe1e9ead6771ad1c78080d30e2e984f612f6b71bb8",
+  "bytes": 1803541,
+  "comparison": {
+    "images": 2,
+    "reviewedEvents": 13,
+    "visibleText": {
+      "GPT": "62/63",
+      "Gemini": "63/63",
+      "Claude": "63/63"
+    },
+    "uncertainty": {
+      "GPT": "0/14",
+      "Gemini": "12/14",
+      "Claude": "12/14"
+    }
+  },
+  "newExtractionExecutedForThisVideo": false
+}
